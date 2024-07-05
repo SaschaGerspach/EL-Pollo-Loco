@@ -1,40 +1,12 @@
 class World {
   character = new Character();
-  enemies = [
-            new Chicken(), 
-            new Chicken(), 
-            new Chicken()
-        ];
-  clouds = [
-    new Cloud()
-];
-  backgroundObjects = [
-    new BackgroundObject("img/5_background/layers/air.png", -719),
-    new BackgroundObject("img/5_background/layers/3_third_layer/2.png", -719),
-    new BackgroundObject("img/5_background/layers/2_second_layer/2.png", -719),
-    new BackgroundObject("img/5_background/layers/1_first_layer/2.png", -719),
-    new BackgroundObject("img/5_background/layers/air.png", 0),
-    new BackgroundObject("img/5_background/layers/3_third_layer/1.png", 0),
-    new BackgroundObject("img/5_background/layers/2_second_layer/1.png", 0),
-    new BackgroundObject("img/5_background/layers/1_first_layer/1.png", 0),
-    new BackgroundObject("img/5_background/layers/air.png", 719),
-    new BackgroundObject("img/5_background/layers/3_third_layer/2.png", 719),
-    new BackgroundObject("img/5_background/layers/2_second_layer/2.png", 719),
-    new BackgroundObject("img/5_background/layers/1_first_layer/2.png", 719),
-    new BackgroundObject("img/5_background/layers/air.png", 719*2),
-    new BackgroundObject("img/5_background/layers/3_third_layer/1.png", 719*2),
-    new BackgroundObject("img/5_background/layers/2_second_layer/1.png", 719*2),
-    new BackgroundObject("img/5_background/layers/1_first_layer/1.png", 719*2),
-    new BackgroundObject("img/5_background/layers/air.png", 719*3),
-    new BackgroundObject("img/5_background/layers/3_third_layer/2.png", 719*3),
-    new BackgroundObject("img/5_background/layers/2_second_layer/2.png", 719*3),
-    new BackgroundObject("img/5_background/layers/1_first_layer/2.png", 719*3),
-];
-
+  level = level1;
   ctx;
   canvas;
   keyboard;
   camera_x = 0;
+  statusBar = new Statusbar();
+  throwableObjects = [];
 
   constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
@@ -42,10 +14,35 @@ class World {
     this.keyboard = keyboard;
     this.draw();
     this.setWorld();
+    this.run();
   }
 
-  setWorld(){
+  setWorld() {
     this.character.world = this;
+  }
+
+   run(){
+    setInterval(() => {
+      this.checkCollitions();
+      this.ceckThrowableObjects();
+    }, 200);  
+  }
+
+  ceckThrowableObjects(){
+    if(this.keyboard.E){
+      let bottle = new ThrowableObject(this.character.x + 100, this.character.y + 100);
+      this.throwableObjects.push(bottle);
+    }
+  }
+
+  checkCollitions(){
+    this.level.enemies.forEach(enemy => {
+      if(this.character.isColliding(enemy)){
+       this.character.hit();
+        this.statusBar.setPercantage(this.character.energy);
+        
+      }
+    });
   }
 
   draw() {
@@ -53,14 +50,18 @@ class World {
 
     this.ctx.translate(this.camera_x, 0);
 
-    this.addObjectsToMap(this.backgroundObjects);
-    this.addToMap(this.character);
-    this.addObjectsToMap(this.enemies);
-    this.addObjectsToMap(this.clouds);
- 
-    
-    this.ctx.translate(-this.camera_x, 0);
+    this.addObjectsToMap(this.level.backgroundObjects);
 
+    this.addObjectsToMap(this.throwableObjects);
+
+    this.addToMap(this.character);
+    this.addObjectsToMap(this.level.enemies);
+    this.addObjectsToMap(this.level.clouds);
+    this.ctx.translate(-this.camera_x, 0);
+    this.addToMap(this.statusBar);
+    this.ctx.translate(this.camera_x, 0);
+
+    this.ctx.translate(-this.camera_x, 0);
 
     let self = this;
     requestAnimationFrame(function () {
@@ -75,16 +76,26 @@ class World {
   }
 
   addToMap(mo) {
-    if(mo.otherDirection){
-        this.ctx.save();
-        this.ctx.translate(mo.width, 0);
-        this.ctx.scale(-1, 1);
-        mo.x = mo.x * -1;
+    if (mo.otherDirection) {
+      this.flipImage(mo);
     }
-    this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
-    if(mo.otherDirection){
-        mo.x = mo.x * -1;
-        this.ctx.restore();
+    mo.draw(this.ctx);
+    mo.drawFrame(this.ctx);
+
+    if (mo.otherDirection) {
+      this.flipImageBack(mo);
     }
+  }
+
+  flipImage(mo) {
+    this.ctx.save();
+    this.ctx.translate(mo.width, 0);
+    this.ctx.scale(-1, 1);
+    mo.x = mo.x * -1;
+  }
+
+  flipImageBack(mo) {
+    mo.x = mo.x * -1;
+    this.ctx.restore();
   }
 }
