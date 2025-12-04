@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="module" src="./Portfolio_files/client"></script>
+
+  
+  <title>Portfolio</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<link rel="stylesheet" href="./Portfolio_files/styles.css"><style>
+
+body[_ngcontent-ng-c3986593979] {
+  margin: 0 auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+}
+.fontPoppins[_ngcontent-ng-c3986593979] {
+  font-family: "Poppins";
+}
+h2[_ngcontent-ng-c3986593979] {
+  font-size: 90px;
+  color: white;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+h3[_ngcontent-ng-c3986593979] {
+  font-size: 58px;
+  color: #9747ff;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-transform: uppercase;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900italic.woff2") format("woff2");
+}
+section[_ngcontent-ng-c3986593979] {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #141d2f;
+  padding: 37px 0px 37px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+}
+section[_ngcontent-ng-c3986593979]    > div[_ngcontent-ng-c3986593979] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+}
+section[_ngcontent-ng-c3986593979]    > div[_ngcontent-ng-c3986593979]    > div[_ngcontent-ng-c3986593979]:nth-child(1) {
+  margin-left: 50px;
+}
+section[_ngcontent-ng-c3986593979]    > div[_ngcontent-ng-c3986593979]    > div[_ngcontent-ng-c3986593979]:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  height: 32px;
+  margin-right: 50px;
+}
+a[_ngcontent-ng-c3986593979] {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 23px;
+  padding-right: 23px;
+}
+a[_ngcontent-ng-c3986593979]:hover {
+  cursor: pointer;
+  color: #70e61c;
+}
+a.custom-underline[_ngcontent-ng-c3986593979] {
+  position: relative;
+  color: #70e61c;
+}
+.custom-underline[_ngcontent-ng-c3986593979]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: var(--underline-width, 0px);
+  height: 4px;
+  color: #70e61c;
+  background-color: #9747ff;
+  z-index: 3;
+}
+/*# sourceMappingURL=header.component.css.map */</style><style>
+
+body[_ngcontent-ng-c3516363859] {
+  margin: 0 auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+}
+.fontPoppins[_ngcontent-ng-c3516363859] {
+  font-family: "Poppins";
+}
+h2[_ngcontent-ng-c3516363859] {
+  font-size: 90px;
+  color: white;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+h3[_ngcontent-ng-c3516363859] {
+  font-size: 58px;
+  color: #9747ff;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-transform: uppercase;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900italic.woff2") format("woff2");
+}
+/*# sourceMappingURL=main-content.component.css.map */</style><style>
+
+body[_ngcontent-ng-c454009747] {
+  margin: 0 auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+}
+.fontPoppins[_ngcontent-ng-c454009747] {
+  font-family: "Poppins";
+}
+h2[_ngcontent-ng-c454009747] {
+  font-size: 90px;
+  color: white;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+h3[_ngcontent-ng-c454009747] {
+  font-size: 58px;
+  color: #9747ff;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-transform: uppercase;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 100;
+  src: url("./media/poppins-v21-latin-100italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./media/poppins-v21-latin-200italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./media/poppins-v21-latin-300italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./media/poppins-v21-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  src: url("./media/poppins-v21-latin-500italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  src: url("./media/poppins-v21-latin-600italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./media/poppins-v21-latin-700italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./media/poppins-v21-latin-800italic.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 900;
+  src: url("./media/poppins-v21-latin-900italic.woff2") format("woff2");
+}
+section[_ngcontent-ng-c454009747] {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-color: #141d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747] {
+  background-image: url("./media/photo_shadows.svg");
+  background-repeat: no-repeat;
+  background-position: -50px 50px;
+  background-size: 800px 800px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2) {
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+  font-size: 1.5em;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(1)    > img[_ngcontent-ng-c454009747] {
+  width: 2rem;
+  height: auto;
+  padding-right: 1.4rem;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+  font-size: 23px;
+  writing-mode: horizontal-tb;
+}
+section[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(2)    > img[_ngcontent-ng-c454009747] {
+  margin-left: 5px;
+  transform: rotate(270deg);
+}
+.line[_ngcontent-ng-c454009747] {
+  width: 100px;
+  height: 4px;
+  background-color: #9747ff;
+  margin-right: 20px;
+}
+.background-image[_ngcontent-ng-c454009747] {
+  position: absolute;
+  bottom: -265px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  width: auto;
+  max-width: none;
+}
+.hero[_ngcontent-ng-c454009747] {
+  margin-top: 100px;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(1) {
+  height: 671px;
+  margin-left: 40px;
+}
+.hero[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  flex: 1;
+}
+.hero[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  flex: 1;
+}
+.hero[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(1)    > span[_ngcontent-ng-c454009747] {
+  transform: rotate(270deg);
+  font-size: 64px;
+  writing-mode: horizontal-tb;
+  margin-bottom: 100px;
+}
+.hero[_ngcontent-ng-c454009747]    > div[_ngcontent-ng-c454009747]:nth-child(2)    > div[_ngcontent-ng-c454009747]:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 80px;
+}
+h2[_ngcontent-ng-c454009747] {
+  font-size: 56px;
+}
+h3[_ngcontent-ng-c454009747] {
+  font-size: 45px;
+}
+button[_ngcontent-ng-c454009747] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 165px;
+  height: 58px;
+  border: unset;
+  border-radius: 10px;
+  background-color: #70E61C;
+  padding: 15px 30px 15px 30px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  margin-right: 40px;
+  z-index: 3;
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+button[_ngcontent-ng-c454009747]:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  font-size: 20px;
+  background-color: #9747ff;
+}
+a[_ngcontent-ng-c454009747] {
+  text-decoration: none;
+  color: white;
+}
+a[_ngcontent-ng-c454009747]:hover {
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .hero[_ngcontent-ng-c454009747] {
+    max-width: 1440px;
+  }
+}
+/*# sourceMappingURL=hero.component.css.map */</style></head>
+<body>
+  <app-root _nghost-ng-c2283532919="" ng-version="17.3.12"><app-header _ngcontent-ng-c2283532919="" _nghost-ng-c3986593979=""><section _ngcontent-ng-c3986593979=""><div _ngcontent-ng-c3986593979=""><div _ngcontent-ng-c3986593979=""><a _ngcontent-ng-c3986593979="" routerlink="#" ng-reflect-router-link="#" href="http://localhost:4200/%23">Sascha</a></div><div _ngcontent-ng-c3986593979=""><a _ngcontent-ng-c3986593979="" href="http://localhost:4200/#about_me" ng-reflect-ng-style="[object Object]" ng-reflect-ng-class="[object Object]" style="--underline-width: 40%;">About me</a><a _ngcontent-ng-c3986593979="" href="http://localhost:4200/" ng-reflect-ng-style="[object Object]" ng-reflect-ng-class="[object Object]" style="--underline-width: 75%;">Skills</a><a _ngcontent-ng-c3986593979="" href="http://localhost:4200/" ng-reflect-ng-style="[object Object]" ng-reflect-ng-class="[object Object]" style="--underline-width: 50%;">Portfolio</a></div></div></section></app-header><router-outlet _ngcontent-ng-c2283532919=""></router-outlet><app-main-content _nghost-ng-c3516363859=""><app-hero _ngcontent-ng-c3516363859="" _nghost-ng-c454009747=""><section _ngcontent-ng-c454009747=""><div _ngcontent-ng-c454009747=""><div _ngcontent-ng-c454009747="" class="hero"><div _ngcontent-ng-c454009747=""><img _ngcontent-ng-c454009747="" src="./Portfolio_files/hero_character_photo.svg" alt=""><img _ngcontent-ng-c454009747="" src="./Portfolio_files/hero_background.svg" alt="Background Image" class="background-image"></div><div _ngcontent-ng-c454009747=""><div _ngcontent-ng-c454009747=""><span _ngcontent-ng-c454009747="">I am</span></div><div _ngcontent-ng-c454009747=""><h2 _ngcontent-ng-c454009747="">Sascha Gerspach</h2><h3 _ngcontent-ng-c454009747="">Frontend Develeoper</h3><button _ngcontent-ng-c454009747="">Let's talk!</button></div></div></div><div _ngcontent-ng-c454009747=""><div _ngcontent-ng-c454009747=""><div _ngcontent-ng-c454009747="" class="line"></div><img _ngcontent-ng-c454009747="" src="./Portfolio_files/github.svg" alt=""><img _ngcontent-ng-c454009747="" src="./Portfolio_files/email_button.svg" alt=""><img _ngcontent-ng-c454009747="" src="./Portfolio_files/linkedin_button.svg" alt=""><a _ngcontent-ng-c454009747="" href="mailto:contact@sascha-gerspach.de">contact@sascha-gerspach.de</a></div><div _ngcontent-ng-c454009747=""> Scroll down <img _ngcontent-ng-c454009747="" src="./Portfolio_files/arrow-down-line.svg" alt=""></div></div></div></section></app-hero></app-main-content><!--container--></app-root>
+<script src="./Portfolio_files/polyfills.js.Download" type="module"></script><script src="./Portfolio_files/main.js.Download" type="module"></script>
+
+<div id="simplesize__viewport" style="display: none;">1455 x 1421</div></body></html>

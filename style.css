@@ -1,25 +1,279 @@
-body{
-    margin: 0;
-    height: 100vh;
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./img/desert.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  object-fit: cover;
+  font-family: "Margarine", sans-serif;
+}
+
+.play_button {
+  position: relative;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 440px;
+  max-height: 90%;
+
+  cursor: pointer;
+}
+
+.play_button img {
+  width: 70px;
+  height: 70px;
+}
+
+canvas {
+  background-color: black;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
+  background-image: url("./img/9_intro_outro_screens/start/startscreen_1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-size: 80px;
+  color: rgb(18, 20, 20);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  max-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.canvasOverlay {
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  max-height: 480px;
+  position: relative;
+  top: 10%;
+}
+
+.canvasOverlay img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fullscreen {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 10%;
+  cursor: pointer;
+}
+
+.fullscreen img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  width: 720px;
+  margin-right: 10px;
+}
+
+.footerControl a {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer span:hover {
+  cursor: pointer;
+}
+
+.footerMobile {
+  display: none;
+}
+
+.footerControl {
+  width: 100%;
+  max-width: 720px;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.privacy {
+  width: 100%;
+  background-color: rgb(249, 173, 75);
+  font-family: "Margarine", sans-serif;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.privacy h2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.privacy h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.privacy h4 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.privacy p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.portrait {
+  display: none;
+}
+
+@media only screen and (max-width: 940px) {
+  .portrait {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-image: url('./img/desert.jpg');
-    background-position: center;
-    object-fit: cover;
-    font-family: "Margarine", sans-serif;
+    align-items: center;
+    padding: 24px;
+  }
+  .portrait h2 {
+    font-size: 30px;
+  }
+
+  .portrait img {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    z-index: -1;
+  }
+
+  h1{
+    display: none;
+  }
+
+  .canvasOverlay{
+    display: none;
+  }
 }
 
+@media only screen and (max-width: 760px) {
+  .intro {
+    border: none;
+    border-radius: 0;
+  }
 
-canvas{
-    background-color: black;
-    border: 20px solid grey;
-    border-radius: 10px;
-
+  canvas {
+    border: none;
+    border-radius: 0;
+  }
 }
 
-h1{
-    font-size: 80px;
-    color: rgb(77, 203, 241);
+@media only screen and (max-width: 720px) {
+  .intro {
+    width: 100%;
+  }
+
+  canvas {
+    width: 100%;
+  }
+
+  .canvasOverlay {
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
+
+.canvasFullscreen {
+  width: 100vw;
+  border-radius: unset;
+}
+
+@media only screen and (max-width: 440px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  h1 {
+    font-size: 58px;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+
+  .portrait{
+    display: none;
+  }
+  h1 {
+    display: inline;
+    margin-block-end: 0;
+  }
+  .canvasOverlay{
+    display: inline;
+  }
+}
+
+@media only screen and (max-height: 480px) {
+  .intro {
+    height: 100vh;
+    border-radius: 0;
+  }
+  .footerMobile {
+    display: inline;
+    width: 80%;
+    max-width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footerControl {
+    display: none;
+  }
+
+  .fullscreen {
+    display: none;
+  }
+
+  canvas {
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  h1 {
+    display: none;
+  }
 }
